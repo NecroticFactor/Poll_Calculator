@@ -1,0 +1,214 @@
+body {
+    background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); /* Sets a gradient background from blue to cyan */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0; /* Removes default margin */
+  }
+  
+  .App-container {
+    display: flex;
+    flex-direction: column; /* Arranges children in a column */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    min-height: 100vh; /* Ensures container takes up at least 100% of the viewport height */
+  }
+  
+  .voter {
+    display: flex;
+    flex-direction: row; /* Arranges children in a row */
+    align-items: center; /* Centers children vertically */
+    text-align: center; /* Centers text horizontally */
+  }
+  
+  #main {
+    display: flex;
+    font-size: 85px; /* Sets font size */
+    padding-right: 150px; /* Adds right padding */
+    color: #040404; /* Sets text color to white */
+    font-family:helvetica; /* Sets font family */
+    font-size: 80pt;
+    font-display: bold;
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+    position: fixed; /* Position relative to the viewport */
+    bottom: 300px; /* Adjust distance from the bottom */
+    left: 20px; /* Adjust distance from the right */
+    padding-left: 100px;
+    color: #fff; /* Example text color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+  }
+  
+  #heading {
+    display: flex;
+    flex-direction: row; /* Arranges children in a row */
+    color: rgb(45, 44, 44); /* Sets text color to a shade of red */
+    font-family: helvetica; /* Sets font family */
+    font-display: bold;
+    font-size: 26px; /* Sets font size */
+    text-align: left;
+    position: fixed; /* Position relative to the viewport */
+    bottom: 280px; /* Adjust distance from the bottom */
+    left: 20px; /* Adjust distance from the right */
+    padding-left: 110px;
+    border: none; /* Remove default border */
+    cursor: pointer;
+  }
+  
+  .poll-values {
+    display: flex;
+    flex-direction: column; /* Arranges children in a column */
+    align-items: center; /* Centers children horizontally */
+    background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
+    position: fixed; /* Position relative to the viewport */
+    bottom: 420px; /* Adjust distance from the bottom */
+    right: 70px; /* Adjust distance from the right */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff; /* Example background color */
+    color: #fff; /* Example text color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    width: 450px;
+    height: 290px;
+  }
+  
+  #poll-heading{
+    font-family: helvetica;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  
+  
+  input[type="number"] {
+    width: 158px;
+    height: 25px;
+  }
+  
+  .input {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    margin-bottom: 10px; /* Adds space below each input group */
+    padding-top: 8px;
+  }
+  
+  .input label {
+    margin-right: 10px; /* Adds space between label and input */
+    width: 150px; /* Sets a fixed width for alignment */
+    text-align: left; /* Aligns label text to the left */
+    font-weight: 600;
+  }
+  
+  #radio-button {
+    flex-direction: column; /* Arranges children in a column */
+    font-size: 15px; /* Sets font size */
+    font-weight: 900; /* Makes the text bold */
+    position: fixed; /* Position relative to the viewport */
+    bottom: 300px; /* Adjust distance from the bottom */
+    right: 160px; /* Adjust distance from the right */
+    background-color: none ;/* Example background color */
+    color: #9f1717; /* Example text color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+  }
+  
+  
+  #answer-heading {
+    text-align: center; /* Centers text horizontally */
+    font-family: helvetica; /* Sets font family */
+    font-weight: 600; /* Sets font weight to 600 */
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  input[type="radio"] {
+    margin: 15px; /* Adds space around the radio button */
+    border-radius: 4px; /* Rounds the corners of the radio button */
+    transform: scale(1.2); /* Scales up the radio button slightly */
+    transition: transform 0.2s ease; /* Smooth transition effect for scaling */
+  }
+  
+  input[type="radio"]:hover {
+    transform: scale(1.8); /* Further scales up the radio button on hover */
+  }
+  
+  label {
+    color: white;
+    font-family: arial;
+    font-size: 20px;
+  }
+  
+  
+  .result-box {
+    display: flex;
+    flex-direction: column; /* Arranges children in a column */
+    align-items: center; /* Centers children horizontally */
+    margin: 10px; /* Adds margin around the result box */
+    border: none; /* Adds a black border around the result-box */
+    color: #fff;
+    position: fixed; /* Position relative to the viewport */
+    bottom: 100px; /* Adjust distance from the bottom */
+    right: 60px; /* Adjust distance from the right */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff;
+    width: 450px;
+    height: 120px;
+    padding-bottom: 45px;
+    background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
+  }
+  
+  #results {
+    font-family: helvetica; /* Sets font family */
+    font-weight: 900; /* Makes the text bold */
+    font-size: 25px;
+    color: #fff;
+  }
+  
+  #Display {
+    align-self: center; /* Centers the element within its parent container */
+  }
+  
+  .Reset-container {
+    display: flex;
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally */
+    border: 2px solid black; /* Adds a black border around the reset-container */
+  }
+  
+  
+  
+  #reset {
+    position: fixed; /* Position relative to the viewport */
+    bottom: 122px; /* Adjust distance from the bottom */
+    right: 90px; /* Adjust distance from the right */
+    padding: 10px 20px; /* Adjust padding as needed */
+    color: #fff; /* Example text color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    padding: 5px 10px; /* Adds padding inside the button */
+    font-family: helvetica;
+    font-weight: 600;
+    font-size: 16px; /* Sets font size */
+    background-color: #dd8212; /* Sets background color */
+    color: #fff; /* Sets text color to white */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect for background color */
+    transition: color 0.3s ease; /* Smooth transition effect for text color */
+  }
+
+  #reset:hover {
+    background-color: #a70000; /* Changes background color on hover */
+  }
+
+  #right, #Total-Votes{
+    font-family: Arial;
+    font-size: 20px;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

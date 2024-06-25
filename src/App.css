@@ -46,29 +46,22 @@ body {
   
 }
 
-@media (max-width: 768px) {
-  .App__main__left,
-  .App__main__right {
-    max-width: 100%; /* Full width on smaller screens */
-    margin: 0; /* Remove margins on smaller screens */
-  }
-}
-
-.App__main__left > h1 {
+.App__main__left > h1{
   color: #fff;
-  font-family: helvetica;
+  font-family:helvetica; /* Sets font family */
   font-size: 70pt;
-  font-weight: bold; /* Correct property name for font weight */
+  font-display: bold;
   margin-top: 10px;
-  padding-bottom: 30px;
+  margin-bottom: 40px;
+  
 }
 
-.App__main__left > h2 {
-  color: rgb(45, 44, 44);
-  font-family: helvetica;
+.App__main__left > h2{
+  color: rgb(45, 44, 44); /* Sets text color to a shade of red */
+  font-family: helvetica; /* Sets font family */
   font-weight: 300;
-  font-size: 32px;
-  margin-top: 0; /* Adjusted from margin-bottom */
+  font-size: 32px; /* Sets font size */
+  margin-bottom: 160px;
   align-self: center;
 }
 
@@ -97,10 +90,12 @@ body {
 
 
 input[type="number"] {
-  width: 158px;
-  height: 25px;
+  width: 165px;
+  height: 29px;
   font-family: helvetica;
   font-size: 20px;
+  border: none;
+  padding-left: 7px;
 }
 
 .input {
@@ -111,15 +106,14 @@ input[type="number"] {
   padding-top: 8px;
 }
 
-.input label {
+.input > label {
   margin-right: 10px; /* Adds space between label and input */
   width: 150px; /* Sets a fixed width for alignment */
   text-align: left; /* Aligns label text to the left */
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #radio-button {
-  
   font-size: 15px; /* Sets font size */
   font-weight: 900; /* Makes the text bold */
   color: #9f1717; /* Example text color */
@@ -129,7 +123,7 @@ input[type="number"] {
 }
 
 .select{
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 14px;
@@ -139,7 +133,7 @@ input[type="number"] {
 #answer-heading {
   text-align: center; /* Centers text horizontally */
   font-family: helvetica; /* Sets font family */
-  font-weight: 600; /* Sets font weight to 600 */
+  font-weight: 400; /* Sets font weight to 600 */
   color: #fff;
   font-size: 22px;
 }
@@ -148,7 +142,7 @@ input[type="radio"] {
   margin: 10px;
   transform: scale(1.2); /* Scales up the radio button slightly */
   transition: transform 0.2s ease; /* Smooth transition effect for scaling */
-  align-items: center;
+  margin-bottom: 10px;
 }
 
 input[type="radio"]:hover {
@@ -179,18 +173,18 @@ label {
   right: 60px; /* Adjust distance from the right */
   padding: 10px 20px; /* Adjust padding as needed */
   background-color: #007bff;
-  width: 520px;
+  width: 510px;
   height: 160px;
   padding-bottom: 45px;
   background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
   margin-left: 130px;
 }
 
-#results {
+.result-box > h3 {
   font-family: helvetica; /* Sets font family */
-  font-weight: 900; /* Makes the text bold */
+  font-weight: 500; /* Makes the text bold */
   font-size: 25px;
-  color: #fff;
+  color: #ffffff;
   padding-top: 10px;
   text-align: center;
 }
@@ -201,23 +195,19 @@ label {
 }
 
 
-
-
-
 #reset {
-  
   padding: 5px 10px; /* Adds padding inside the button */
-  cursor: pointer;
   font-family: helvetica;
   font-weight: 600;
   font-size: 16px; /* Sets font size */
+  font-style: italic;
   background-color: #dd8212; /* Sets background color */
   color: #fff; /* Sets text color to white */
   border: none;
-  border-radius: 5px; /* Rounds the corners of the button */
   cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth transition effect for background color */
   transition: color 0.3s ease; /* Smooth transition effect for text color */
+  margin-left: 330px;
+
 }
 
 #reset:hover {
