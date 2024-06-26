@@ -11,7 +11,7 @@ export default function Input({ response, updateResponse }) {
             1<sup>st</sup> Poll Count
           </label>
           <input
-            type="number"
+            type="text"
             onChange={(e) => updateResponse(e, "response1")}
             value={response.response1}
           />
@@ -22,7 +22,7 @@ export default function Input({ response, updateResponse }) {
             2<sup>nd</sup> Poll Count
           </label>
           <input
-            type="number"
+            type="text"
             onChange={(e) => updateResponse(e, "response2")}
             value={response.response2}
           />
@@ -33,7 +33,7 @@ export default function Input({ response, updateResponse }) {
             3<sup>rd</sup> Poll Count
           </label>
           <input
-            type="number"
+            type="text"
             onChange={(e) => updateResponse(e, "response3")}
             value={response.response3}
           />
@@ -44,7 +44,7 @@ export default function Input({ response, updateResponse }) {
             4<sup>th</sup> Poll Count
           </label>
           <input
-            type="number"
+            type="text"
             onChange={(e) => updateResponse(e, "response4")}
             value={response.response4}
           />

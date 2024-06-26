@@ -85,7 +85,7 @@ body {
 }
 
 
-input[type="number"] {
+input[type="text"] {
   width: 165px;
   height: 29px;
   font-family: helvetica;
@@ -141,13 +141,13 @@ input[type="radio"] {
   margin-bottom: 10px;
 }
 
-input[type="radio"]:hover {
+input[type="radio"]:not(.disabled-radio):hover {
   transform: scale(1.8); /* Further scales up the radio button on hover */
 }
 
 .disabled-radio {
-  pointer-events: none; /* Disables pointer events */
   opacity: 0.5; /* Reduces opacity to indicate disabled state */
+  cursor: not-allowed;
 }
 
 .label{

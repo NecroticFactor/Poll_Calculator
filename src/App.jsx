@@ -45,12 +45,13 @@ function App() {
       totalVotes: total,
       percentageRight: percentage.toFixed(2),
     });
-  }, [response.selectedResponse]);
+  }, [response.selectedResponse, response.response1, response.response2, response.response3, response.response4]);
 
   function updateResponse(event, responseKey) {
+    const newValue = event.target.value.trim();
     setResponse({
       ...response,
-      [responseKey]: event.target.value,
+      [responseKey]: newValue,
     });
   }
 

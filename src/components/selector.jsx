@@ -5,7 +5,12 @@ export default function Selector({
   selectedResponse,
   handleRadioChange,
 }) {
-  const hasValues = Object.values(response).some((value) => value !== "");
+  const hasValues = Object.keys(response).filter(key => key !== 'selectedResponse').every((key) => {
+    const value = response[key];
+    return value !== "" && !isNaN(value) && Number.isInteger(parseFloat(value));
+  });
+
+
 
   return (
     <div id="radio-button">
