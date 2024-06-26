@@ -1,23 +1,22 @@
-export default function Result() {
+export default function Result({ totalVotes, percentageRight, onReset }) {
   return (
     <div className="result-box">
       <h3>Results</h3>
       <div id="Display">
         <div>
-          <label id="output" htmlFor="Total-Votes">
-            Total Votes :
-          </label>
-          <output id="Total-Votes"> </output>
+          <label htmlFor="Total-Votes">Total Votes :</label>
+          <output id="Total-Votes">{totalVotes}</output>
         </div>
 
         <div>
-          <label id="output" htmlFor="right">
-            Percentage Right Answer :
-          </label>
-          <output id="right"></output>
+          <label htmlFor="right">Percentage Right Answer :</label>
+          <output id="right">{percentageRight}%</output>
         </div>
+
         <div>
-          <button id="reset">RESET</button>
+          <button id="reset" onClick={onReset}>
+            RESET
+          </button>
         </div>
       </div>
     </div>

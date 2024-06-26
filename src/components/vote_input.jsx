@@ -1,21 +1,4 @@
-import React, { useState } from "react";
-
-export default function Input() {
-  const [response, setResponse] = useState({
-    response1: "",
-    response2: "",
-    response3: "",
-    response4: "",
-    selectedResponse: "",
-  });
-
-  function updateResponse(event, responseKey) {
-    setResponse({
-      ...response,
-      [responseKey]: event.target.value,
-    });
-  }
-
+export default function Input({ updateResponse }) {
   return (
     <div>
       <form className="poll-values">
