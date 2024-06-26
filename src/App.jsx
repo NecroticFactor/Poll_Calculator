@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Result from "./components/result";
 import Selector from "./components/selector";
@@ -20,6 +20,37 @@ function App() {
     percentageRight: 0,
   });
 
+  useEffect(() => {
+    // Calculate total whenever response or selectedResponse changes
+    const total = Object.values(response).reduce((acc, val) => {
+      if (!isNaN(val) && typeof val === "string") {
+        return acc + parseInt(val, 10); // Sum up numeric values
+      }
+      return acc;
+    }, 0);
+
+    console.log("Total:", total);
+
+    // Ensure response[selectedResponse] is numeric or default to 0 if undefined
+    const selectedValue = response.selectedResponse;
+    const selectedValueVotes = response[selectedValue]
+      ? parseFloat(response[selectedValue])
+      : 0;
+
+    console.log("Selected Value Votes:", selectedValueVotes);
+
+    // Calculate percentage of right answer
+    const percentage = total === 0 ? 0 : (selectedValueVotes / total) * 100;
+
+    console.log("Percentage:", percentage);
+
+    // Update results state with calculated values
+    setResults({
+      totalVotes: total,
+      percentageRight: percentage.toFixed(2), // Round to 2 decimal places
+    });
+  }, [response.selectedResponse]); // Depend on response and selectedResponse changes
+
   function updateResponse(event, responseKey) {
     setResponse({
       ...response,
@@ -32,32 +63,6 @@ function App() {
     setResponse({
       ...response,
       selectedResponse: selectedValue,
-    });
-
-    const total = Object.values(response).reduce((acc, val) => {
-      if (!isNaN(val) && typeof val === "string") {
-        return acc + parseInt(val, 10); // Sum up numeric values
-      }
-      return acc;
-    }, 0);
-
-    console.log("Total:", total);
-
-    // Ensure response[selectedValue] is numeric or default to 0 if undefined
-    const selectedValueVotes = response[selectedValue]
-      ? parseFloat(response[selectedValue])
-      : 0;
-
-    console.log("Selected Value Votes:", selectedValueVotes);
-
-    // Calculate percentage of right answer
-    const percentage = total === 0 ? 0 : (selectedValueVotes / total) * 100;
-
-    console.log("Percentage:", percentage);
-
-    setResults({
-      totalVotes: total,
-      percentageRight: percentage.toFixed(2), // Round to 2 decimal places
     });
   }
 
