@@ -19,8 +19,8 @@ export default function Selector({
             type="radio"
             id="rightA"
             name="right-answer"
-            value="A"
-            checked={selectedResponse === "A"}
+            value="response1"
+            checked={response.selectedResponse === "response1"}
             onChange={handleRadioChange}
             disabled={!hasValues}
             className={!hasValues ? "disabled-radio" : ""}
@@ -35,8 +35,8 @@ export default function Selector({
             type="radio"
             id="rightB"
             name="right-answer"
-            value="B"
-            checked={selectedResponse === "B"}
+            value="response2"
+            checked={response.selectedResponse === "response2"}
             onChange={handleRadioChange}
             disabled={!hasValues}
             className={!hasValues ? "disabled-radio" : ""}
@@ -51,8 +51,8 @@ export default function Selector({
             type="radio"
             id="rightC"
             name="right-answer"
-            value="C"
-            checked={selectedResponse === "C"}
+            value="response3"
+            checked={response.selectedResponse === "response3"}
             onChange={handleRadioChange}
             disabled={!hasValues}
             className={!hasValues ? "disabled-radio" : ""}
@@ -67,8 +67,8 @@ export default function Selector({
             type="radio"
             id="rightD"
             name="right-answer"
-            value="D"
-            checked={selectedResponse === "D"}
+            value="response4"
+            checked={response.selectedResponse === "response4"}
             onChange={handleRadioChange}
             disabled={!hasValues}
             className={!hasValues ? "disabled-radio" : ""}
