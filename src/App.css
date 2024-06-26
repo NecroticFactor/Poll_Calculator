@@ -15,7 +15,7 @@ body {
 
 .App{
   width: 100vw;
-  min-height: 100vh; /* Ensures container takes up at least 100% of the viewport height */
+  min-height: 100vh; 
   padding: 3rem;
   overflow-x: hidden;
 }
@@ -27,10 +27,10 @@ body {
   min-width: 4rem;
 }
 
-/* Adjust layout for larger screens */
-@media (min-width: 1500px) {
+
+@media (min-width: 1300px) {
   .App__main {
-    flex-direction: row; /* Place items side by side */
+    flex-direction: row; 
   }
 }
 
@@ -42,7 +42,6 @@ body {
   flex-direction: column;
   text-align: left;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .App__main__right{
