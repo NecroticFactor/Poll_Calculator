@@ -23,6 +23,7 @@ export default function Selector({
             checked={selectedResponse === "A"}
             onChange={handleRadioChange}
             disabled={!hasValues}
+            className={!hasValues ? "disabled-radio" : ""}
           />
         </div>
 
@@ -38,6 +39,7 @@ export default function Selector({
             checked={selectedResponse === "B"}
             onChange={handleRadioChange}
             disabled={!hasValues}
+            className={!hasValues ? "disabled-radio" : ""}
           />
         </div>
 
@@ -53,6 +55,7 @@ export default function Selector({
             checked={selectedResponse === "C"}
             onChange={handleRadioChange}
             disabled={!hasValues}
+            className={!hasValues ? "disabled-radio" : ""}
           />
         </div>
 
@@ -68,6 +71,7 @@ export default function Selector({
             checked={selectedResponse === "D"}
             onChange={handleRadioChange}
             disabled={!hasValues}
+            className={!hasValues ? "disabled-radio" : ""}
           />
         </div>
       </form>

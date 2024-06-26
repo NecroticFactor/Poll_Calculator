@@ -149,6 +149,11 @@ input[type="radio"]:hover {
   transform: scale(1.8); /* Further scales up the radio button on hover */
 }
 
+.disabled-radio {
+  pointer-events: none; /* Disables pointer events */
+  opacity: 0.5; /* Reduces opacity to indicate disabled state */
+}
+
 .label{
   align-items: center;
   margin-bottom: 0.5rem;
