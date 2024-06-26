@@ -1,4 +1,21 @@
+import React, { useState } from "react";
+
 export default function Input() {
+  const [response, setResponse] = useState({
+    response1: "",
+    response2: "",
+    response3: "",
+    response4: "",
+    selectedResponse: "",
+  });
+
+  function updateResponse(event, responseKey) {
+    setResponse({
+      ...response,
+      [responseKey]: event.target.value,
+    });
+  }
+
   return (
     <div>
       <form className="poll-values">
@@ -8,28 +25,44 @@ export default function Input() {
           <label htmlFor="A">
             1<sup>st</sup> Poll Count
           </label>
-          <input type="number" id="A" name="A" />
+          <input
+            type="number"
+            onChange={(e) => updateResponse(e, "response1")}
+            value={response.response1}
+          />
         </div>
 
         <div className="input">
           <label htmlFor="B">
             2<sup>nd</sup> Poll Count
           </label>
-          <input type="number" id="B" name="B" />
+          <input
+            type="number"
+            onChange={(e) => updateResponse(e, "response2")}
+            value={response.response2}
+          />
         </div>
 
         <div className="input">
           <label htmlFor="C">
             3<sup>rd</sup> Poll Count
           </label>
-          <input type="number" id="C" name="C" />
+          <input
+            type="number"
+            onChange={(e) => updateResponse(e, "response3")}
+            value={response.response3}
+          />
         </div>
 
         <div className="input">
           <label htmlFor="D">
             4<sup>th</sup> Poll Count
           </label>
-          <input type="number" id="D" name="D" />
+          <input
+            type="number"
+            onChange={(e) => updateResponse(e, "response4")}
+            value={response.response4}
+          />
         </div>
       </form>
     </div>
