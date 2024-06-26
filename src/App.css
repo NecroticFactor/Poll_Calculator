@@ -1,9 +1,3 @@
-body {
-  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); /* Sets a gradient background from blue to cyan */
-  height: 100vh; /* 100% of the viewport height */
-  margin: 0; /* Removes default margin */
-}
-
 
 *{
   margin: 0;
@@ -12,6 +6,11 @@ body {
 }
 
 
+body {
+  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); /* Sets a gradient background from blue to cyan */
+  height: 100vh; /* 100% of the viewport height */
+  margin: 0; /* Removes default margin */
+}
 
 .App{
   width: 100vw;
@@ -23,7 +22,6 @@ body {
 .App__main{
   display: flex;
   height:calc(100vh - 6rem) ;
-  
 }
 
 .App__main__left{
@@ -43,7 +41,6 @@ body {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  
 }
 
 .App__main__left > h1{
@@ -53,7 +50,6 @@ body {
   font-display: bold;
   margin-top: 10px;
   margin-bottom: 40px;
-  
 }
 
 .App__main__left > h2{

@@ -7,12 +7,14 @@ export default function Result({ totalVotes, percentageRight, onReset }) {
       <div id="Display">
         <div>
           <label htmlFor="Total-Votes">Total Votes :</label>
-          <output id="Total-Votes">{totalVotes}</output>
+          <output id="Total-Votes">{isNaN(totalVotes) ? 0 : totalVotes}</output>
         </div>
 
         <div>
           <label htmlFor="right">Percentage Right Answer :</label>
-          <output id="right">{percentageRight}%</output>
+          <output id="right">
+            {isNaN(percentageRight) ? "0" : percentageRight}%
+          </output>
         </div>
 
         <div>

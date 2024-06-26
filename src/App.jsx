@@ -21,17 +21,15 @@ function App() {
   });
 
   useEffect(() => {
-    // Calculate total whenever response or selectedResponse changes
     const total = Object.values(response).reduce((acc, val) => {
       if (!isNaN(val) && typeof val === "string") {
-        return acc + parseInt(val, 10); // Sum up numeric values
+        return acc + parseInt(val, 10);
       }
       return acc;
     }, 0);
 
     console.log("Total:", total);
 
-    // Ensure response[selectedResponse] is numeric or default to 0 if undefined
     const selectedValue = response.selectedResponse;
     const selectedValueVotes = response[selectedValue]
       ? parseFloat(response[selectedValue])
@@ -39,17 +37,15 @@ function App() {
 
     console.log("Selected Value Votes:", selectedValueVotes);
 
-    // Calculate percentage of right answer
     const percentage = total === 0 ? 0 : (selectedValueVotes / total) * 100;
 
     console.log("Percentage:", percentage);
 
-    // Update results state with calculated values
     setResults({
       totalVotes: total,
-      percentageRight: percentage.toFixed(2), // Round to 2 decimal places
+      percentageRight: percentage.toFixed(2),
     });
-  }, [response.selectedResponse]); // Depend on response and selectedResponse changes
+  }, [response.selectedResponse]);
 
   function updateResponse(event, responseKey) {
     setResponse({
