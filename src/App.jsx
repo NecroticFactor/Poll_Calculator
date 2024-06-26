@@ -5,7 +5,7 @@ import Selector from "./components/selector";
 import Input from "./components/vote_input";
 
 function App() {
-  const initialResponsetate = {
+  const initialResponseState = {
     response1: "",
     response2: "",
     response3: "",
@@ -76,7 +76,11 @@ function App() {
 
         <div className="App__main__right">
           <Input response={response} updateResponse={updateResponse} />
-          <Selector response={response} updateResponse={updateResponse} />
+          <Selector
+            response={response}
+            selectedResponse={response.selectedResponse}
+            handleRadioChange={handleRadioChange}
+          />
           <Result
             totalVotes={results.totalVotes}
             percentageRight={results.percentageRight}

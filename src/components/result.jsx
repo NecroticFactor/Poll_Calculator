@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Result({ totalVotes, percentageRight, onReset }) {
   return (
     <div className="result-box">

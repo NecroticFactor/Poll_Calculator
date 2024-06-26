@@ -1,4 +1,4 @@
-export default function Input({ updateResponse }) {
+export default function Input({ response, updateResponse }) {
   return (
     <div>
       <form className="poll-values">
