@@ -99,7 +99,7 @@ function App() {
           <Result
             totalVotes={results.totalVotes}
             percentageRight={results.percentageRight}
-            onReset={handleReset} // Pass handleReset function as onReset prop
+            onReset={handleReset}
           />
         </div>
       </main>
