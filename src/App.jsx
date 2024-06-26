@@ -35,15 +35,25 @@ function App() {
     });
 
     const total = Object.values(response).reduce((acc, val) => {
-      if (!isNaN(val)) {
-        return acc + parseInt(val);
+      if (!isNaN(val) && typeof val === "string") {
+        return acc + parseInt(val, 10); // Sum up numeric values
       }
       return acc;
     }, 0);
 
+    console.log("Total:", total);
+
+    // Ensure response[selectedValue] is numeric or default to 0 if undefined
+    const selectedValueVotes = response[selectedValue]
+      ? parseFloat(response[selectedValue])
+      : 0;
+
+    console.log("Selected Value Votes:", selectedValueVotes);
+
     // Calculate percentage of right answer
-    const percentage =
-      total === 0 ? 0 : (response[selectedValue] / total) * 100;
+    const percentage = total === 0 ? 0 : (selectedValueVotes / total) * 100;
+
+    console.log("Percentage:", percentage);
 
     setResults({
       totalVotes: total,
