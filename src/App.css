@@ -9,13 +9,13 @@
 
 body {
   background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); 
-  height: 100vh; 
-  margin: 0; 
+  height: 100vh;
+  margin: 0;
 }
 
 .App{
   width: 100vw;
-  min-height: 100vh; 
+  min-height: 100vh;
   padding: 3rem;
   overflow-x: hidden;
 }
@@ -30,7 +30,7 @@ body {
 
 @media (min-width: 1300px) {
   .App__main {
-    flex-direction: row; 
+    flex-direction: row;
   }
 }
 
@@ -55,7 +55,7 @@ body {
 
 .App__main__left > h1{
   color: #fff;
-  font-family:helvetica; 
+  font-family:helvetica;
   font-size: 5rem;
   font-display: bold;
   margin-top: 10px;
