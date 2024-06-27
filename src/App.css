@@ -6,23 +6,34 @@
 }
 
 
+
 body {
-  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); /* Sets a gradient background from blue to cyan */
-  height: 100vh; /* 100% of the viewport height */
-  margin: 0; /* Removes default margin */
+  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); 
+  height: 100vh; 
+  margin: 0; 
 }
 
 .App{
   width: 100vw;
-  min-height: 100vh; /* Ensures container takes up at least 100% of the viewport height */
+  min-height: 100vh; 
   padding: 3rem;
   overflow-x: hidden;
 }
 
 .App__main{
   display: flex;
-  height:calc(100vh - 6rem) ;
+  flex-direction: column;
+  height:calc(100vh - 6rem);
+  min-width: 4rem;
 }
+
+
+@media (min-width: 1300px) {
+  .App__main {
+    flex-direction: row; 
+  }
+}
+
 
 .App__main__left{
   display: flex;
@@ -31,7 +42,6 @@ body {
   flex-direction: column;
   text-align: left;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .App__main__right{
@@ -45,36 +55,40 @@ body {
 
 .App__main__left > h1{
   color: #fff;
-  font-family:helvetica; /* Sets font family */
-  font-size: 70pt;
+  font-family:helvetica; 
+  font-size: 5rem;
   font-display: bold;
   margin-top: 10px;
   margin-bottom: 40px;
 }
 
 .App__main__left > h2{
-  color: rgb(45, 44, 44); /* Sets text color to a shade of red */
-  font-family: helvetica; /* Sets font family */
+  color: rgb(45, 44, 44); 
+  font-family: helvetica; 
   font-weight: 300;
-  font-size: 32px; /* Sets font size */
-  margin-bottom: 160px;
+  font-size: 2rem; 
+  margin-bottom: 10rem;
   align-self: center;
 }
 
 
 .poll-values {
   display: flex;
-  flex-direction: column; /* Arranges children in a column */
-  align-items: center; /* Centers children horizontally */
+  flex-direction: column; 
+  align-items: center; 
   background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
   justify-content: center;
-  background-color: #007bff; /* Example background color */
-  color: #fff; /* Example text color */
-  border: none; /* Remove default border */
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
   cursor: pointer;
-  width: 510px;
+  
   height: 260px;
   margin-left: 120px;
+  width: 510px; /* Use percentage for width */
+  max-width: 510px; /* Set max width for large screens */
+  margin-left: auto; /* Center element with auto margin */
+  margin-right: auto; /* Center element with auto margin */
 }
 
 #poll-heading{
@@ -96,7 +110,7 @@ input[type="text"] {
 
 .input {
   display: flex;
-  align-items: center; /* Centers items vertically */
+  align-items: center; 
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
   margin-bottom: 10px; /* Adds space below each input group */
   padding-top: 8px;
@@ -115,7 +129,7 @@ input[type="text"] {
   color: #9f1717; /* Example text color */
   border: none; /* Remove default border */
   cursor: pointer;
-  margin-left: 120px;
+  margin-left: 30px;
 }
 
 .select{
@@ -170,15 +184,15 @@ label {
   margin: 10px; /* Adds margin around the result box */
   border: none; /* Adds a black border around the result-box */
   color: #fff;
-  bottom: 100px; /* Adjust distance from the bottom */
-  right: 60px; /* Adjust distance from the right */
   padding: 10px 20px; /* Adjust padding as needed */
   background-color: #007bff;
   width: 510px;
   height: 160px;
   padding-bottom: 45px;
   background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
-  margin-left: 130px;
+  max-width: 510px; /* Set max width for large screens */
+  
+  
 }
 
 .result-box > h3 {
