@@ -8,7 +8,7 @@
 
 
 body {
-  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) ); 
+  background:linear-gradient(to right, rgb(48, 219, 255), rgb(79,172,255) );
   height: 100vh;
   margin: 0;
 }
@@ -63,10 +63,10 @@ body {
 }
 
 .App__main__left > h2{
-  color: rgb(45, 44, 44); 
-  font-family: helvetica; 
+  color: rgb(45, 44, 44);
+  font-family: helvetica;
   font-weight: 300;
-  font-size: 2rem; 
+  font-size: 2rem;
   margin-bottom: 10rem;
   align-self: center;
 }
@@ -74,15 +74,14 @@ body {
 
 .poll-values {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
   justify-content: center;
-  background-color: #007bff; 
-  color: #fff; 
-  border: none; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  
   height: 260px;
   margin-left: 120px;
   width: 510px; /* Use percentage for width */
@@ -191,8 +190,6 @@ label {
   padding-bottom: 45px;
   background: linear-gradient(to right, rgb(60, 179, 237), rgb(69,163,239) );
   max-width: 510px; /* Set max width for large screens */
-  
-  
 }
 
 .result-box > h3 {

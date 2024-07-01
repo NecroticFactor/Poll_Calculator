@@ -28,24 +28,24 @@ function App() {
       return acc;
     }, 0);
 
-    console.log("Total:", total);
-
     const selectedValue = response.selectedResponse;
     const selectedValueVotes = response[selectedValue]
       ? parseFloat(response[selectedValue])
       : 0;
 
-    console.log("Selected Value Votes:", selectedValueVotes);
-
     const percentage = total === 0 ? 0 : (selectedValueVotes / total) * 100;
-
-    console.log("Percentage:", percentage);
 
     setResults({
       totalVotes: total,
       percentageRight: percentage.toFixed(2),
     });
-  }, [response.selectedResponse, response.response1, response.response2, response.response3, response.response4]);
+  }, [
+    response.selectedResponse,
+    response.response1,
+    response.response2,
+    response.response3,
+    response.response4,
+  ]);
 
   function updateResponse(event, responseKey) {
     const newValue = event.target.value.trim();
