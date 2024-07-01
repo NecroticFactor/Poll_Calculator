@@ -11,6 +11,7 @@ export default function Input({ response, updateResponse }) {
             1<sup>st</sup> Poll Count
           </label>
           <input
+          autoFocus = {true}
             type="text"
             onChange={(e) => updateResponse(e, "response1")}
             value={response.response1}
