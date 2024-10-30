@@ -1,2 +1,2 @@
-# Vote_Counter
+# Vote Counter
  A simple social media poll counter that I built to calculate results of the polls I conduct being a medical content creator in social media.
