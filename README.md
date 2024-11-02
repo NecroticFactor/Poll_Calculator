@@ -74,7 +74,7 @@ For example:
 
 ## Built With
 
-- **Node.js**
+- **React.js**
 - **npm**
 
 ## Contributing
