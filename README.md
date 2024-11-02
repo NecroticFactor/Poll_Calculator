@@ -23,15 +23,15 @@ You’ll need the following tools installed on your machine:
 
 1. **Clone the repository:**
 
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/poll-result-calculator.git
-   \`\`\`
+   ```
 
 2. **Navigate to the project directory:**
 
-   \`\`\`bash
+   ```bash
    cd poll-result-calculator
-   \`\`\`
+   ```
 
 3. **Install the required dependencies:**
 
