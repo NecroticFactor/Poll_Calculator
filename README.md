@@ -35,9 +35,9 @@ You’ll need the following tools installed on your machine:
 
 3. **Install the required dependencies:**
 
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 ### Running the Application
 
@@ -47,17 +47,17 @@ You can run the application using the following commands:
 
    This will start the project in development mode with live reloading for any code changes.
 
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 - **Run the project in production mode:**
 
    This will build and run the project optimized for production.
 
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 
 ### Example Usage
 
