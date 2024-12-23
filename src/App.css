@@ -109,7 +109,7 @@ input[type="text"] {
 
 .input {
   display: flex;
-  align-items: center; 
+  align-items: center;
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
   margin-bottom: 10px; /* Adds space below each input group */
   padding-top: 8px;
